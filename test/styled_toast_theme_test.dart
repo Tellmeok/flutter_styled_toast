@@ -10,8 +10,8 @@ void main() {
       final borderRadius = BorderRadius.circular(5.0);
       const textPadding =
           EdgeInsets.symmetric(horizontal: 17.0, vertical: 10.0);
-      const toastAnimation = StyledToastAnimation.size;
-      const reverseAnimation = StyledToastAnimation.size;
+      const toastAnimation = StyledToastAnimationType.size;
+      const reverseAnimation = StyledToastAnimationType.size;
       const startOffset = Offset(0.0, -1.0);
       const reverseEndOffset = Offset(0.0, -1.0);
       const duration = Duration(seconds: 4);
@@ -67,8 +67,8 @@ void main() {
       expect(styledToastTheme.borderRadius, BorderRadius.circular(5.0));
       expect(styledToastTheme.textPadding,
           const EdgeInsets.symmetric(horizontal: 17.0, vertical: 10.0));
-      expect(styledToastTheme.toastAnimation, StyledToastAnimation.size);
-      expect(styledToastTheme.reverseAnimation, StyledToastAnimation.size);
+      expect(styledToastTheme.toastAnimation, StyledToastAnimationType.size);
+      expect(styledToastTheme.reverseAnimation, StyledToastAnimationType.size);
       expect(styledToastTheme.startOffset, const Offset(0.0, -1.0));
       expect(styledToastTheme.reverseEndOffset, const Offset(0.0, -1.0));
       expect(styledToastTheme.duration, const Duration(seconds: 4));

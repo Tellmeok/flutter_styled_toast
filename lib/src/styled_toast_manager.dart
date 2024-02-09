@@ -6,14 +6,14 @@ import 'styled_toast.dart';
 
 /// The method to dismiss all toast.
 void dismissAllToast({bool showAnim = false}) {
-  ToastManager().dismissAll(showAnim: showAnim);
+  StyledToastManager().dismissAll(showAnim: showAnim);
 }
 
 /// The class for managing the overlay and dismiss.
 ///
 /// Use the [dismiss] to dismiss toast.
 /// When the Toast is dismissed, call [onDismiss] if specified.
-class ToastFuture {
+class StyledToastFuture {
   /// Toast overlay.
   final OverlayEntry _entry;
 
@@ -41,7 +41,7 @@ class ToastFuture {
   /// Get the [_containerKey]
   GlobalKey get containerKey => _containerKey;
 
-  ToastFuture.create(
+  StyledToastFuture.create(
     Duration duration,
     this._entry,
     this._onDismiss,
@@ -65,7 +65,7 @@ class ToastFuture {
     _isShow = false;
     _timer?.cancel();
     _onDismiss?.call();
-    ToastManager().removeFuture(this);
+    StyledToastManager().removeFuture(this);
     if (showAnim) {
       await _containerKey.currentState?.dismissToastAnim();
     } else {
@@ -76,20 +76,20 @@ class ToastFuture {
 }
 
 /// Toast manager, manage toast list.
-class ToastManager {
-  ToastManager._();
+class StyledToastManager {
+  StyledToastManager._();
 
-  /// Instance of [ToastManager].
-  static ToastManager? _instance;
+  /// Instance of [StyledToastManager].
+  static StyledToastManager? _instance;
 
-  /// Factory to create [ToastManager] singleton.
-  factory ToastManager() {
-    _instance ??= ToastManager._();
+  /// Factory to create [StyledToastManager] singleton.
+  factory StyledToastManager() {
+    _instance ??= StyledToastManager._();
     return _instance!;
   }
 
-  /// [Set] used to save [ToastFuture].
-  Set<ToastFuture> toastSet = {};
+  /// [Set] used to save [StyledToastFuture].
+  Set<StyledToastFuture> toastSet = {};
 
   /// Dismiss all toast.
   void dismissAll({
@@ -100,13 +100,13 @@ class ToastManager {
     });
   }
 
-  /// Remove [ToastFuture].
-  void removeFuture(ToastFuture future) {
+  /// Remove [StyledToastFuture].
+  void removeFuture(StyledToastFuture future) {
     toastSet.remove(future);
   }
 
-  /// Add [ToastFuture].
-  void addFuture(ToastFuture future) {
+  /// Add [StyledToastFuture].
+  void addFuture(StyledToastFuture future) {
     toastSet.add(future);
   }
 }

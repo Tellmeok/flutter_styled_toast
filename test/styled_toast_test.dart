@@ -10,8 +10,8 @@ void main() {
       const borderRadius = BorderRadius.all(Radius.circular(5.0));
       const textPadding =
           EdgeInsets.symmetric(horizontal: 17.0, vertical: 10.0);
-      const toastAnimation = StyledToastAnimation.size;
-      const reverseAnimation = StyledToastAnimation.size;
+      const toastAnimation = StyledToastAnimationType.size;
+      const reverseAnimation = StyledToastAnimationType.size;
       const startOffset = Offset(0.0, -1.0);
       const reverseEndOffset = Offset(0.0, -1.0);
       const duration = Duration(seconds: 4);
@@ -69,8 +69,8 @@ void main() {
       expect(styledToast.borderRadius, BorderRadius.circular(5.0));
       expect(styledToast.textPadding,
           const EdgeInsets.symmetric(horizontal: 17.0, vertical: 10.0));
-      expect(styledToast.toastAnimation, StyledToastAnimation.size);
-      expect(styledToast.reverseAnimation, StyledToastAnimation.size);
+      expect(styledToast.toastAnimation, StyledToastAnimationType.size);
+      expect(styledToast.reverseAnimation, StyledToastAnimationType.size);
       expect(styledToast.startOffset, const Offset(0.0, -1.0));
       expect(styledToast.reverseEndOffset, const Offset(0.0, -1.0));
       expect(styledToast.duration, const Duration(seconds: 4));
@@ -109,8 +109,8 @@ void main() {
         onDismiss: () {},
         textDirection: TextDirection.ltr,
         dismissOtherToast: true,
-        animation: StyledToastAnimation.slideFromBottom,
-        reverseAnimation: StyledToastAnimation.slideToLeftFade,
+        animation: StyledToastAnimationType.slideFromBottom,
+        reverseAnimation: StyledToastAnimationType.slideToLeftFade,
         alignment: Alignment.center,
         axis: Axis.horizontal,
         startOffset: const Offset(0, 1.0),
@@ -145,8 +145,8 @@ void main() {
         onDismiss: () {},
         textDirection: TextDirection.ltr,
         dismissOtherToast: true,
-        animation: StyledToastAnimation.slideFromBottom,
-        reverseAnimation: StyledToastAnimation.slideToLeftFade,
+        animation: StyledToastAnimationType.slideFromBottom,
+        reverseAnimation: StyledToastAnimationType.slideToLeftFade,
         alignment: Alignment.center,
         axis: Axis.horizontal,
         startOffset: const Offset(0, 1.0),
@@ -179,8 +179,8 @@ void main() {
         onDismiss: () {},
         textDirection: TextDirection.ltr,
         dismissOtherToast: true,
-        animation: StyledToastAnimation.slideFromBottom,
-        reverseAnimation: StyledToastAnimation.slideToLeftFade,
+        animation: StyledToastAnimationType.slideFromBottom,
+        reverseAnimation: StyledToastAnimationType.slideToLeftFade,
         alignment: Alignment.center,
         axis: Axis.horizontal,
         startOffset: const Offset(0, 1.0),
@@ -233,8 +233,8 @@ class TestAppWidgetState extends State<TestAppWidget> {
       backgroundColor: const Color(0x99000000),
       borderRadius: const BorderRadius.all(Radius.circular(5.0)),
       textPadding: const EdgeInsets.symmetric(horizontal: 17.0, vertical: 10.0),
-      toastAnimation: StyledToastAnimation.size,
-      reverseAnimation: StyledToastAnimation.size,
+      toastAnimation: StyledToastAnimationType.size,
+      reverseAnimation: StyledToastAnimationType.size,
       startOffset: const Offset(0.0, -1.0),
       reverseEndOffset: const Offset(0.0, -1.0),
       duration: const Duration(seconds: 4),

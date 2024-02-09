@@ -34,8 +34,8 @@ class _MyAppState extends State<MyApp> {
       backgroundColor: Color(0x99000000),
       borderRadius: BorderRadius.circular(5.0),
       textPadding: EdgeInsets.symmetric(horizontal: 17.0, vertical: 10.0),
-      toastAnimation: StyledToastAnimation.size,
-      reverseAnimation: StyledToastAnimation.size,
+      toastAnimation: StyledToastAnimationType.size,
+      reverseAnimation: StyledToastAnimationType.size,
       startOffset: Offset(0.0, -1.0),
       reverseEndOffset: Offset(0.0, -1.0),
       duration: Duration(seconds: 4),
@@ -250,7 +250,7 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with fade animation',
                     context: context,
-                    animation: StyledToastAnimation.fade,
+                    animation: StyledToastAnimationType.fade,
                     curve: Curves.linear,
                     reverseCurve: Curves.linear);
               },
@@ -265,8 +265,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromTop,
-                    reverseAnimation: StyledToastAnimation.slideToTop,
+                    animation: StyledToastAnimationType.slideFromTop,
+                    reverseAnimation: StyledToastAnimationType.slideToTop,
                     position: StyledToastPosition.top,
                     startOffset: Offset(0.0, -3.0),
                     reverseEndOffset: Offset(0.0, -3.0),
@@ -287,8 +287,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromTopFade,
-                    reverseAnimation: StyledToastAnimation.slideToTopFade,
+                    animation: StyledToastAnimationType.slideFromTopFade,
+                    reverseAnimation: StyledToastAnimationType.slideToTopFade,
                     position: StyledToastPosition(
                         align: Alignment.topCenter, offset: 0.0),
                     startOffset: Offset(0.0, -3.0),
@@ -310,8 +310,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromBottom,
-                    reverseAnimation: StyledToastAnimation.slideToBottom,
+                    animation: StyledToastAnimationType.slideFromBottom,
+                    reverseAnimation: StyledToastAnimationType.slideToBottom,
                     startOffset: Offset(0.0, 3.0),
                     reverseEndOffset: Offset(0.0, 3.0),
                     position: StyledToastPosition.bottom,
@@ -332,8 +332,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromBottomFade,
-                    reverseAnimation: StyledToastAnimation.slideToBottomFade,
+                    animation: StyledToastAnimationType.slideFromBottomFade,
+                    reverseAnimation: StyledToastAnimationType.slideToBottomFade,
                     startOffset: Offset(0.0, 3.0),
                     reverseEndOffset: Offset(0.0, 3.0),
                     position: StyledToastPosition(
@@ -355,8 +355,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromLeft,
-                    reverseAnimation: StyledToastAnimation.slideToTop,
+                    animation: StyledToastAnimationType.slideFromLeft,
+                    reverseAnimation: StyledToastAnimationType.slideToTop,
                     position: StyledToastPosition.top,
                     startOffset: Offset(-1.0, 0.0),
                     reverseEndOffset: Offset(-1.0, 0.0),
@@ -378,8 +378,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromLeftFade,
-                    reverseAnimation: StyledToastAnimation.slideToTopFade,
+                    animation: StyledToastAnimationType.slideFromLeftFade,
+                    reverseAnimation: StyledToastAnimationType.slideToTopFade,
                     toastHorizontalMargin: 0.0,
                     position: StyledToastPosition(
                         align: Alignment.topLeft, offset: 20.0),
@@ -403,8 +403,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromRight,
-                    reverseAnimation: StyledToastAnimation.slideToRight,
+                    animation: StyledToastAnimationType.slideFromRight,
+                    reverseAnimation: StyledToastAnimationType.slideToRight,
                     position: StyledToastPosition.top,
                     startOffset: Offset(1.0, 0.0),
                     reverseEndOffset: Offset(1.0, 0.0),
@@ -424,8 +424,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.slideFromRightFade,
-                    reverseAnimation: StyledToastAnimation.slideToRightFade,
+                    animation: StyledToastAnimationType.slideFromRightFade,
+                    reverseAnimation: StyledToastAnimationType.slideToRightFade,
                     toastHorizontalMargin: 0.0,
                     position: StyledToastPosition(
                         align: Alignment.topRight, offset: 20.0),
@@ -447,8 +447,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.size,
-                    reverseAnimation: StyledToastAnimation.size,
+                    animation: StyledToastAnimationType.size,
+                    reverseAnimation: StyledToastAnimationType.size,
                     axis: Axis.horizontal,
                     position: StyledToastPosition.center,
                     animDuration: Duration(milliseconds: 400),
@@ -467,8 +467,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.sizeFade,
-                    reverseAnimation: StyledToastAnimation.sizeFade,
+                    animation: StyledToastAnimationType.sizeFade,
+                    reverseAnimation: StyledToastAnimationType.sizeFade,
                     axis: Axis.horizontal,
                     position: StyledToastPosition.center,
                     animDuration: Duration(milliseconds: 400),
@@ -487,8 +487,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.scale,
-                    reverseAnimation: StyledToastAnimation.fade,
+                    animation: StyledToastAnimationType.scale,
+                    reverseAnimation: StyledToastAnimationType.fade,
                     position: StyledToastPosition.center,
                     animDuration: Duration(seconds: 1),
                     duration: Duration(seconds: 4),
@@ -506,8 +506,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.fadeScale,
-                    reverseAnimation: StyledToastAnimation.scaleRotate,
+                    animation: StyledToastAnimationType.fadeScale,
+                    reverseAnimation: StyledToastAnimationType.scaleRotate,
                     position: StyledToastPosition.center,
                     animDuration: Duration(seconds: 1),
                     duration: Duration(seconds: 4),
@@ -525,8 +525,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.rotate,
-                    reverseAnimation: StyledToastAnimation.fadeRotate,
+                    animation: StyledToastAnimationType.rotate,
+                    reverseAnimation: StyledToastAnimationType.fadeRotate,
                     position: StyledToastPosition.center,
                     animDuration: Duration(seconds: 1),
                     duration: Duration(seconds: 4),
@@ -544,8 +544,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.fadeRotate,
-                    reverseAnimation: StyledToastAnimation.fadeScale,
+                    animation: StyledToastAnimationType.fadeRotate,
+                    reverseAnimation: StyledToastAnimationType.fadeScale,
                     position: StyledToastPosition.center,
                     animDuration: Duration(seconds: 1),
                     duration: Duration(seconds: 4),
@@ -563,8 +563,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToast('This is normal toast with animation',
                     context: context,
-                    animation: StyledToastAnimation.scaleRotate,
-                    reverseAnimation: StyledToastAnimation.fade,
+                    animation: StyledToastAnimationType.scaleRotate,
+                    reverseAnimation: StyledToastAnimationType.fade,
                     position: StyledToastPosition.center,
                     animDuration: Duration(seconds: 1),
                     duration: Duration(seconds: 4),
@@ -586,7 +586,7 @@ class _MyHomePageState extends State<MyHomePage>
                 showToast(
                   'This is normal toast with onDismissed',
                   context: context,
-                  animation: StyledToastAnimation.fade,
+                  animation: StyledToastAnimationType.fade,
                   duration: Duration(seconds: 2),
                   animDuration: Duration(milliseconds: 1000),
                   onDismiss: () {
@@ -792,8 +792,8 @@ class _MyHomePageState extends State<MyHomePage>
               onTap: () {
                 showToastWidget(BannerToastWidget.fail(msg: 'Request failed'),
                     context: context,
-                    animation: StyledToastAnimation.slideFromLeft,
-                    reverseAnimation: StyledToastAnimation.slideToLeft,
+                    animation: StyledToastAnimationType.slideFromLeft,
+                    reverseAnimation: StyledToastAnimationType.slideToLeft,
                     alignment: Alignment.centerLeft,
                     axis: Axis.horizontal,
                     position: StyledToastPosition(
@@ -864,8 +864,8 @@ class _MyHomePageState extends State<MyHomePage>
                 showToastWidget(IconToastWidget.fail(msg: 'failed'),
                     context: context,
                     position: StyledToastPosition.center,
-                    animation: StyledToastAnimation.scale,
-                    reverseAnimation: StyledToastAnimation.fade,
+                    animation: StyledToastAnimationType.scale,
+                    reverseAnimation: StyledToastAnimationType.fade,
                     duration: Duration(seconds: 4),
                     animDuration: Duration(seconds: 1),
                     curve: Curves.elasticOut,
@@ -883,8 +883,8 @@ class _MyHomePageState extends State<MyHomePage>
                 showToastWidget(IconToastWidget.success(msg: 'success'),
                     context: context,
                     position: StyledToastPosition.center,
-                    animation: StyledToastAnimation.scale,
-                    reverseAnimation: StyledToastAnimation.fade,
+                    animation: StyledToastAnimationType.scale,
+                    reverseAnimation: StyledToastAnimationType.fade,
                     duration: Duration(seconds: 4),
                     animDuration: Duration(seconds: 1),
                     curve: Curves.elasticOut,

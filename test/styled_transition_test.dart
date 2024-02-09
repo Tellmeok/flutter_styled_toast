@@ -58,7 +58,7 @@ class _TestWidgetState extends State<TestWidget> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return CustomSizeTransition(
+    return StyledToastAnimation(
       sizeFactor: animation,
       child: Container(
         width: 100,

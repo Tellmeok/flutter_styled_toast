@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'custom_animation.dart';
+import 'styled_toast_animation.dart';
 import 'styled_toast.dart';
-import 'styled_toast_enum.dart';
+import 'styled_toast_enums.dart';
 
 /// Toast theme, only for default content widget.
 ///
@@ -56,10 +56,10 @@ class StyledToastTheme extends InheritedWidget {
   final Offset? reverseEndOffset;
 
   /// Toast animation.
-  final StyledToastAnimation? toastAnimation;
+  final StyledToastAnimationType? toastAnimation;
 
   /// Toast reverse animation.
-  final StyledToastAnimation? reverseAnimation;
+  final StyledToastAnimationType? reverseAnimation;
 
   /// Animation curve.
   final Curve? curve;
@@ -80,10 +80,10 @@ class StyledToastTheme extends InheritedWidget {
   final bool? isHideKeyboard;
 
   /// Custom animation builder method.
-  final CustomAnimationBuilder? animationBuilder;
+  final StyledToastAnimationBuilder? animationBuilder;
 
   /// Custom animation builder method.
-  final CustomAnimationBuilder? reverseAnimBuilder;
+  final StyledToastAnimationBuilder? reverseAnimBuilder;
 
   /// Is the input ignored for the toast.
   final bool? isIgnoring;

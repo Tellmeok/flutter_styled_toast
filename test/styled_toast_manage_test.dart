@@ -15,9 +15,9 @@ void main() {
       final testAppWidget = TestAppWidget(overlayEntry: entry, key: key);
       await tester.pumpWidget(testAppWidget);
 
-      ToastFuture toastFuture = ToastFuture.create(const Duration(seconds: 4),
+      StyledToastFuture toastFuture = StyledToastFuture.create(const Duration(seconds: 4),
           entry, () {}, GlobalKey(debugLabel: 'toast future global key'));
-      final toastManager = ToastManager();
+      final toastManager = StyledToastManager();
       toastManager.addFuture(toastFuture);
 
       key.currentState?.insertEntry();
@@ -46,18 +46,18 @@ void main() {
       final testAppWidget = TestAppWidget(overlayEntry: entry, key: key);
       await tester.pumpWidget(testAppWidget);
 
-      ToastFuture toastFuture = ToastFuture.create(const Duration(seconds: 4),
+      StyledToastFuture toastFuture = StyledToastFuture.create(const Duration(seconds: 4),
           entry, () {}, GlobalKey(debugLabel: 'toast future global key'));
 
       key.currentState?.insertEntry();
       toastFuture.dismiss(showAnim: true);
 
-      expect(ToastManager().toastSet.length, 0);
+      expect(StyledToastManager().toastSet.length, 0);
 
-      ToastManager().addFuture(toastFuture);
-      expect(ToastManager().toastSet.length, 1);
-      ToastManager().removeFuture(toastFuture);
-      expect(ToastManager().toastSet.length, 0);
+      StyledToastManager().addFuture(toastFuture);
+      expect(StyledToastManager().toastSet.length, 1);
+      StyledToastManager().removeFuture(toastFuture);
+      expect(StyledToastManager().toastSet.length, 0);
     });
 
     testWidgets('All toast should be dismissed', (WidgetTester tester) async {
@@ -95,7 +95,7 @@ void main() {
       expect(find.text('toast6'), findsOneWidget);
       expect(find.text('toast7'), findsOneWidget);
 
-      ToastManager().dismissAll(showAnim: true);
+      StyledToastManager().dismissAll(showAnim: true);
 
       await tester.pump(const Duration(milliseconds: 100));
 

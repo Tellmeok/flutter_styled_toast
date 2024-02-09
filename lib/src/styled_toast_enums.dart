@@ -46,7 +46,7 @@ enum StyledToastShowType {
 }
 
 /// Toast animation.
-enum StyledToastAnimation {
+enum StyledToastAnimationType {
   /// Fade in and out animation.
   fade,
 
